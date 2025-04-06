@@ -1,53 +1,39 @@
+# EgoText - Text Manipulation Library for EgoLang
 
-# EgoText - Complete Text Manipulation Library for EgoLang
+[![EgoLang](https://img.shields.io/badge/EgoLang-%E2%9A%96%20Powered-FFD700?style=flat&logo=expensify&logoColor=00274D&labelColor=0057B7&color=00A4E0&borderRadius=50)](https://github.com/isamytanaka/EgoLang)
+![Version](https://img.shields.io/badge/Version-1.0.0-00CED1?style=flat&logo=semantic-release&logoColor=white&labelColor=008B8B&color=20B2AA)
+[![License](https://img.shields.io/badge/License-MIT-9370DB?style=flat&logo=license&logoColor=white&labelColor=8A2BE2&borderRadius=20)](https://github.com/isamytanaka/EgoLang/blob/main/LICENSE)
+![Open Source](https://img.shields.io/badge/Open_Source_Contributor-3DA639?style=flat&logo=github&logoColor=FFFFFF&labelColor=1E1E1E&color=006400)
 
-[![EgoLang Compatible](https://img.shields.io/badge/EgoLang-2.8%2B-00A4E0?style=flat&logo=expensify&logoColor=white)](https://github.com/isamytanaka/EgoLang)
-[![Version](https://img.shields.io/badge/Version-1.2.0-FF4500?style=flat)](https://github.com/isamytanaka/EgoLang/releases)
-[![License](https://img.shields.io/badge/License-MIT-9370DB?style=flat)](https://opensource.org/licenses/MIT)
-[![Build Status](https://img.shields.io/badge/Build-Passing-4CAF50?style=flat)](https://github.com/isamytanaka/EgoLang/actions)
-[![Coverage](https://img.shields.io/badge/Coverage-92%25-388E3C?style=flat)](https://github.com/isamytanaka/EgoLang/actions)
+*A robust text processing library for the EgoLang ecosystem*
 
-## Table of Contents
-1. [Installation](#installation)
-2. [Basic Usage](#basic-usage)
-3. [API Reference](#api-reference)
-4. [Advanced Examples](#advanced-examples)
-5. [Performance Tips](#performance-tips)
-6. [Support](#support)
+## Support the Developer
+
+[![Support on Apoia.se](https://img.shields.io/badge/Apoia.se-Support_Isamy_Tanaka-D72638?style=flat&logo=buymeacoffee&logoColor=white&labelColor=FF3D3D&color=D72638)](https://apoia.se/isamytanaka)
+
+If you find this project valuable, consider supporting Isamy Tanaka's work through Apoia.se. Your contribution helps maintain and improve EgoLang and its ecosystem.
+
+## Key Features
+
+- Case conversion (upper/lower/capitalize)
+- String reversal operations
+- Length calculation utilities
+- Empty string detection
+- Simple and intuitive API design
 
 ## Installation
 
 ```bash
-# Clone the EgoLang repository (if not already installed)
-git clone https://github.com/isamytanaka/EgoLang.git
-
-# Copy the EgoText library to your project
-cp EgoLang/src/libraries/EgoText.ego ./your_project/
+git clone https://github.com/isamytanaka/EgoText.git
 ```
 
-## Basic Usage
+## Usage Example
 
-### Initialization
 ```ego
-// Import the EgoText class (automatic in EgoLang)
 public mutable EgoText text = @py: EgoText();
-
-// Set initial content
-text.content = "Hello World";
+text.content = "Hello EgoLang";
+print(text.toUpper().reverse());  // Output: "GNALOGE OLLEH"
 ```
-
-### Simple Operations
-```ego
-// Convert to uppercase
-print(text.toUpper());  // Output: "HELLO WORLD"
-
-// Get string length
-print(text.length());   // Output: 11
-
-// Check if empty
-print(text.isEmpty());  // Output: false
-```
-
 ## API Reference
 
 ### Core Methods
@@ -108,10 +94,9 @@ if (text.length() > 10) {
 3. **Length Checks**: Use `isEmpty()` before processing large strings
 4. **Python Interop**: For complex operations, consider `@py:` directives
 
-## Support
+## Community
 
 [![Issues](https://img.shields.io/badge/Support-GitHub_Issues-FFA500?style=flat&logo=github)](https://github.com/isamytanaka/EgoLang/issues)
-[![Apoia.se](https://img.shields.io/badge/Apoia.se-Support_Isamy_Tanaka-D72638?style=flat&logo=buymeacoffee&logoColor=white)](https://apoia.se/isamytanaka)
 
 Created by [Isamy Tanaka](https://github.com/isamytanaka)  
 [![Follow](https://img.shields.io/github/followers/isamytanaka?style=social)](https://github.com/isamytanaka)  
