@@ -1,0 +1,75 @@
+public class EgoText {
+    public mutable string content;
+    
+    // Método para converter para maiúsculas
+    public mutable string toUpper() {
+        mutable string result = "";
+        for (mutable int i = 0; i < content.size(); i++) {
+            if (content[i] >= "a" && content[i] <= "z") {
+                result += (content[i] - 32);
+            } else {
+                result += content[i];
+            }
+        }
+        content = result;
+        return content;
+    }
+    
+    // Método para converter para minúsculas
+    public mutable string toLower() {
+        mutable string result = "";
+        for (mutable int i = 0; i < content.size(); i++) {
+            if (content[i] >= "A" && content[i] <= "Z") {
+                result += (content[i] + 32);
+            } else {
+                result += content[i];
+            }
+        }
+        content = result;
+        return content;
+    }
+    
+    // Método para contar caracteres
+    public mutable int length() {
+        mutable int count = 0;
+        while (count < content.size() && content[count] != null) {
+            count++;
+        }
+        return count;
+    }
+    
+    // Método para inverter string
+    public mutable string reverse() {
+        mutable string reversed = "";
+        for (mutable int i = content.size() - 1; i >= 0; i--) {
+            reversed += content[i];
+        }
+        content = reversed;
+        return content;
+    }
+    
+    // Método para verificar se está vazio
+    public mutable bool isEmpty() {
+        return content.size() == 0;
+    }
+    
+    // Método para capitalizar primeira letra
+    public mutable string capitalize() {
+        if (content.size() == 0) {
+            return content;
+        }
+        
+        mutable string first = content[0];
+        if (first >= "a" && first <= "z") {
+            first = (first - 32);
+        }
+        
+        mutable string rest = "";
+        if (content.size() > 1) {
+            rest = content[1..];
+        }
+        
+        content = first + rest;
+        return content;
+    }
+}
